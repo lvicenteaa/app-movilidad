@@ -7,4 +7,4 @@ def home(request):
     context = {
         'movilidades': movilidades
     }
-    return render(request, 'movilidades/index.html', context)
+    return render(request, 'movilidades/registro.html', context)
