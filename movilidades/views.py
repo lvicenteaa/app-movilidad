@@ -8,3 +8,6 @@ def home(request):
         'movilidades': movilidades
     }
     return render(request, 'movilidades/registro.html', context)
+
+def movilidad(request):
+    pass

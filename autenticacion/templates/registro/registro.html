@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<form method="post" action="">
+<form action="" method="post" style="color: white;">
     {% csrf_token %}
-    {{form}}
-    <button type="submit">Registrar</button>
+    <div style="width: 75%; margin: auto;">
+        {{ form|crispy }}
+    </div>
+    <button type="submit" class="btn btn-success">Registrar</button>
 </form>
-
-</body>
-</html>
