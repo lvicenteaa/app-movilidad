@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
-@login_required(login_url='/autenticacion/logear')
+@login_required(login_url='autenticacion')
 def home(request):
     # movilidades = Movilidad.objects.get()
     # context = {
@@ -15,7 +15,7 @@ def home(request):
     return render(request, 'movilidades/perfil.html')
 
 
-@login_required(login_url='/autentication/logear')
+@login_required(login_url='autenticacion')
 def index(request):
     #movilidades = Movilidad.objects.get()
     #context = {
@@ -25,7 +25,7 @@ def index(request):
     return render(request, 'movilidades/authenticated/index.html')
 
 
-@login_required(login_url='/autentication/logear')
+@login_required(login_url='autenticacion')
 def movilidades(request):
     if request.method == 'POST':
         # Guardar la información
@@ -38,7 +38,7 @@ def movilidades(request):
         return render(request, 'movilidades/authenticated/movilidad.html', {'form': form})
 
 
-login_required(login_url='/autentication/logear')
+login_required(login_url='autenticacion')
 def tipos(request):
     if request.method == 'POST':
         # Guardar la información
@@ -50,7 +50,7 @@ def tipos(request):
         form = TipoForm()
         return render(request, 'movilidades/authenticated/tipo.html', {'form': form})
 
-login_required(login_url='/autentication/logear')
+login_required(login_url='autenticacion/')
 def eventos(request):
     if request.method == 'POST':
         # Guardar la información
@@ -62,7 +62,7 @@ def eventos(request):
         form = EventoForm()
         return render(request, 'movilidades/authenticated/evento.html', {'form': form})
 
-login_required(login_url='/autentication/logear')
+login_required(login_url='autenticacion/')
 def modalidades(request):
     if request.method == 'POST':
         # Guardar la información
