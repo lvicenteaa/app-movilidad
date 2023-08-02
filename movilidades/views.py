@@ -7,12 +7,12 @@ from django.contrib.auth.decorators import login_required
 
 
 @login_required(login_url='autenticacion')
-def home(request):
+def perfil(request):
     # movilidades = Movilidad.objects.get()
     # context = {
     #    'movilidades': movilidades
     # }
-    return render(request, 'movilidades/perfil.html')
+    return render(request, 'movilidades/authenticated/perfil.html')
 
 
 @login_required(login_url='autenticacion')
